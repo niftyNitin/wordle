@@ -77,13 +77,13 @@ p {
     margin: 10px;
 }
 
-.green-overlay {
-    background-color: #538d4e !important;
+.yellow-overlay {
+    background-color: #bf9f3a !important;
     border: none !important;
 }
 
-.yellow-overlay {
-    background-color: #bf9f3a !important;
+.green-overlay {
+    background-color: #538d4e !important;
     border: none !important;
 }
 

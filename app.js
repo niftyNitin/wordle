@@ -139,19 +139,18 @@ const flipTile = () => {
         guess.push({ letter: tile.getAttribute('data'), color: 'grey-overlay' });
     });
 
-    guess.forEach((guess, index) => {
-        if (guess.letter == wordle[index]) {
-            guess.color = 'green-overlay';
-            checkWordle = checkWordle.replace(wordle[index], '');
-        }
-    });
     guess.forEach((guess) => {
         if (checkWordle.includes(guess.letter)) {
             guess.color = 'yellow-overlay';
             checkWordle = checkWordle.replace(guess.letter, '');
         }
     });
-
+    guess.forEach((guess, index) => {
+        if (guess.letter == wordle[index]) {
+            guess.color = 'green-overlay';
+            checkWordle = checkWordle.replace(wordle[index], '');
+        }
+    });
 
     rowTiles.forEach((tile, index) => {
         setTimeout(() => {
@@ -165,7 +164,6 @@ const flipTile = () => {
 // function to add style to the keys in the keyboard after submitting a row
 const addColorToKey = (key, color) => {
     const keyElement = document.getElementById(key);
-    console.log(keyElement);
     if (keyElement.classList.contains('green-overlay')) {
         return;
     }
