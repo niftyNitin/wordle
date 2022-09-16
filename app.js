@@ -106,8 +106,8 @@ const checkRow = () => {
         }
         else {
             if (currentRow >= 5) {
-                isGameOver = false;
                 showMessage('Game Over. Wordle was ' + wordle);
+                isGameOver = true;
                 return;
             }
             else {
